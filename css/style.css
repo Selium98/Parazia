@@ -141,6 +141,7 @@ header {
 
 .card-text:hover{
     text-decoration: none;
+    color: black;
 }
 
 
