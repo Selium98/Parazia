@@ -1,0 +1,72 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(13,218,250);
+}
+.text{
+    width: 100%;
+    padding-top: 50px;
+    color: black;
+    text-align: center;
+    font-size: 100px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.sub-text{
+    text-align: center;
+    color: #424242;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding-bottom: 60px;
+    letter-spacing: 3px;
+    font-weight: 600px;
+}
+
+.thumb{
+    width: 100%;
+    min-height: 100vh;
+    margin-bottom: 100px;
+    position: relative;
+}
+.bg{
+    width: 100%;
+    min-height: 250px;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    transition: top 1s linear;
+}
+.bg1{
+    background: url('../images/img1.jpg') no-repeat center;
+}
+.bg2{
+    background: url('../images/img2.jpg') no-repeat center;
+}
+.bg3{
+    background: url('../images/img3.jpg') no-repeat center;
+}
+.bg4{
+    background: url('../images/img4.jpg') no-repeat center;
+}
+.bg5{
+    background: url('../images/img5.jpg') no-repeat center;
+}
+.bg6{
+    background: url('../images/img6.jpg') no-repeat center;
+}
+
+section{
+    min-height: 120px;
+}
+
+.bottom-text{
+    text-align: center;
+}
