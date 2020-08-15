@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effect 4 - Sandwich Mouse Scroll Parallex</title>
+    <link rel="icon" href="images/logo.png" sizes="16x16">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="text">Parallax</div>
+        <div class="sub-text">
+        	<p>here is a sandwich mouse scroll parallax effect</p>
+        	<p>scroll at your own risk😜</p>
+    	</div>
+    <div class="thumb">
+        <div class="bg bg1"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+        <div class="bg bg4"></div>
+        <div class="bg bg5"></div>
+        <div class="bg bg6"></div>
+    </div>
+    <section class="bottom-text">
+        <h2>Ahh, you scrolled... didn't you 😋, Look the Sandwich has Fallen Off ! 😟 Scroll back up to make the Sandwich whole again 😁</h2>
+    </section>
+
+    <script>
+        function check(element){
+            const item = document.querySelector(element);
+            return item.scrollHeight/2;
+        }
+        function start(element1, element2){
+            const el1 = document.querySelectorAll(element1);
+            const el2 = document.querySelectorAll(element2);
+            el1.forEach((item, index)=>{
+                let height = item.clientHeight;
+                item.style.top = `${index*height}px`;
+                el2.forEach(item =>{
+                    item.style.minHeight = `${el1.length * height}px`;
+                })
+            })
+        }
+        function end(element){
+            const el = document.querySelectorAll(element);
+            el.forEach(item =>{
+                item.style.top = 0;
+            })
+        }
+
+        window.addEventListener('scroll', ()=>{
+            if(window.scrollY > check('.text')){
+                start('.bg', '.thumb');
+            }else{
+                end('.bg');
+            }
+        })
+    </script>
+</body>
+</html>
